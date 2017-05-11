@@ -5,6 +5,7 @@ var path = require('path');
 
 // serve static files
 app.use(express.static(path.resolve('./server/public')));
+app.use(bodyParser.json());
 
 // server index file
 app.get('/info', function(req, res) {
